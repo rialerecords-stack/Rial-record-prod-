@@ -1,0 +1,93 @@
+{
+  "recent": {
+    "title": "Nouvelle sortie",
+    "artist": "Sango Ericephraim",
+    "track": ""
+  },
+  "artists": [
+    {
+      "name": "lamanoir1.7",
+      "city": "Tenkodogo",
+      "genre": "Urbain",
+      "bio": "Profil Facebook fourni — bio à compléter.",
+      "image": "https://placehold.co/600x400?text=lamanoir1.7",
+      "track": "",
+      "links": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/lamanoir1.7"
+        }
+      ]
+    },
+    {
+      "name": "chebir.frodoneur",
+      "city": "Tenkodogo",
+      "genre": "Urbain",
+      "bio": "Profil Facebook fourni — bio à compléter.",
+      "image": "https://placehold.co/600x400?text=chebir.frodoneur",
+      "track": "",
+      "links": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/chebir.frodoneur"
+        }
+      ]
+    },
+    {
+      "name": "profile-61550254484507",
+      "city": "Tenkodogo",
+      "genre": "Urbain",
+      "bio": "Profil Facebook (id=61550254484507) — bio à compléter.",
+      "image": "https://placehold.co/600x400?text=Artiste+1",
+      "track": "",
+      "links": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/profile.php?id=61550254484507"
+        }
+      ]
+    },
+    {
+      "name": "profile-61560994264367",
+      "city": "Tenkodogo",
+      "genre": "Urbain",
+      "bio": "Profil Facebook (id=61560994264367) — bio à compléter.",
+      "image": "https://placehold.co/600x400?text=Artiste+2",
+      "track": "",
+      "links": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/profile.php?id=61560994264367"
+        }
+      ]
+    },
+    {
+      "name": "profile-61582352138593",
+      "city": "Tenkodogo",
+      "genre": "Urbain",
+      "bio": "Profil Facebook (id=61582352138593) — bio à compléter.",
+      "image": "https://placehold.co/600x400?text=Artiste+3",
+      "track": "",
+      "links": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/profile.php?id=61582352138593"
+        }
+      ]
+    },
+    {
+      "name": "Sango Ericephraim",
+      "city": "Tenkodogo",
+      "genre": "Urbain / Rap",
+      "bio": "Chaîne YouTube fournie — bio à compléter.",
+      "image": "https://placehold.co/600x400?text=Sango+Ericephraim",
+      "track": "",
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://youtube.com/@sangoericephraim?si=nHgkjJbbOaWnDPq7"
+        }
+      ]
+    }
+  ]
+}

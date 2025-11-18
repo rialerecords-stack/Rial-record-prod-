@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RIALÉ RECORDS — Artistes urbains de Tenkodogo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="RIALÉ RECORDS — Promotion des artistes urbains de Tenkodogo. Nouveautés, clips, événements et contact booking." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>RIALÉ RECORDS</h1>
+      <p>Promotion des artistes urbains de Tenkodogo</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero">
+      <h2>Nouveautés</h2>
+      <div id="new-release">Chargement…</div>
+    </section>
+
+    <section id="artists">
+      <h2>Nos artistes</h2>
+      <div id="artist-list" class="grid">Chargement…</div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Booking</h2>
+      <p>Email : contact@riale-records.com (à créer si tu veux email pro)</p>
+      <p>WhatsApp / Mobile : +226 55275717</p>
+      <h3>Soutenir / Acheter (Mobile Money)</h3>
+      <p>Envoyez XOF au numéro mobile money ci‑dessus (Orange Money / MTN Mobile Money). Envoyez ensuite une capture à notre WhatsApp : <a href="https://wa.me/22655275717" target="_blank" rel="noopener">+226 55275717</a> en précisant : “Don / Achat – Nom de l’artiste – Titre”. Nous confirmerons la réception.</p>
+      <p><a href="https://wa.me/22655275717" target="_blank" class="btn">Contacter sur WhatsApp</a></p>
+    </section>
+
+    <section id="submit">
+      <h2>Soumettre un artiste</h2>
+      <p>Formulaire : <a href="https://forms.gle/EXEMPLE" target="_blank">Clique ici pour soumettre</a> (utilise Google Forms gratuit)</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© RIALÉ RECORDS — Tenkodogo</small>
+    </div>
+  </footer>
+
+  <script>
+    async function loadArtists() {
+      try {
+        const res = await fetch('artists.json');
+        const data = await res.json();
+        const list = document.getElementById('artist-list');
+        list.innerHTML = '';
+        data.artists.forEach(a => {
+          const card = document.createElement('article');
+          card.className = 'card';
+          card.innerHTML = `
+            <img src="${a.image}" alt="${a.name}">
+            <h3>${a.name}</h3>
+            <p class="genre">${a.genre} — ${a.city}</p>
+            ${ a.track ? `<audio controls src="${a.track}" preload="none"></audio>` : '' } 
+            <p class="bio">${a.bio}</p>
+            <p class="links">${a.links.map(l=>`<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join(' • ')}</p>
+          `;
+          list.appendChild(card);
+        });
+
+        const release = document.getElementById('new-release');
+        if (data.recent) {
+          release.innerHTML = `<strong>${data.recent.title}</strong> — ${data.recent.artist} ${ data.recent.track ? `<audio controls src="${data.recent.track}"></audio>` : '' }`;
+        } else {
+          release.innerHTML = 'Aucune sortie récente.';
+        }
+      } catch (e) {
+        console.error(e);
+        document.getElementById('artist-list').innerText = 'Erreur de chargement.';
+      }
+    }
+    loadArtists();
+  </script>
+</body>
+</html>
