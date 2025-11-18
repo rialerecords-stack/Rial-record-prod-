@@ -61,7 +61,7 @@
             <img src="${a.image}" alt="${a.name}">
             <h3>${a.name}</h3>
             <p class="genre">${a.genre} — ${a.city}</p>
-            ${ a.track ? `<audio controls src="${a.track}" preload="none"></audio>` : '' } 
+            ${ a.track ? `<audio controls src="${a.track}" preload="none"></audio>` : '' }
             <p class="bio">${a.bio}</p>
             <p class="links">${a.links.map(l=>`<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join(' • ')}</p>
           `;
